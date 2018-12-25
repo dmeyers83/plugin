@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Summareyes",
+  "version": "0.0.0.1",
+  "description": "Summarize the top 5 pros and cons from the last 150 Amazon reviews with 1 click!",
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "eye.png",
+    "default_popup": "newtab.html"
+  }
+
+}
